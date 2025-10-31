@@ -85,4 +85,7 @@ if uploaded_file is not None:
     elif selected_report == "Which stadium hosted the most matches?":
         venue_count = matches_data["venue"].value_counts().head(10)
         st.subheader("🏟️ Top Stadiums by Match Count")
-        st.write(venue_cou_
+        st.write(venue_count)
+
+else:
+    st.info("📌 Please upload IPL matches CSV file to continue.")
